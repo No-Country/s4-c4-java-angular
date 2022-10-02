@@ -3,13 +3,14 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-bottombar',
   templateUrl: './bottombar.component.html',
-  styleUrls: ['./bottombar.component.scss']
+  styleUrls: ['./bottombar.component.scss'],
 })
 export class BottombarComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
+  logout() {
+    console.log('Salir de la app');
   }
-
 }

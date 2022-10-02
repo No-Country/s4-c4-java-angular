@@ -1,1 +1,34 @@
-<p>bottombar works!</p>
+<div class="bottombar">
+  <div class="bottombar__button">
+    <img
+      class="bottombar__button-icon"
+      src="../../../assets/iconos/home.svg"
+      alt="home icon"
+    />
+    <a routerLink="home" class="bottombar__button-text">Home</a>
+  </div>
+  <div class="bottombar__button">
+    <img
+      class="bottombar__button-icon"
+      src="../../../assets/iconos/briefcase.svg"
+      alt="home icon"
+    />
+    <a routerLink="collection" class="bottombar__button-text">Coleccion</a>
+  </div>
+  <div class="bottombar__button">
+    <img
+      class="bottombar__button-icon"
+      src="../../../assets/iconos/union.svg"
+      alt="home icon"
+    />
+    <a routerLink="profile" class="bottombar__button-text">Perfil</a>
+  </div>
+  <div class="bottombar__button">
+    <img
+      class="bottombar__button-icon"
+      src="../../../assets/iconos/quit.svg"
+      alt="home icon"
+    />
+    <a (click)="logout()" class="bottombar__button-text">Chau!</a>
+  </div>
+</div>

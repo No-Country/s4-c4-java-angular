@@ -1,0 +1,36 @@
+@import "../../../assets/styles/main.scss";
+
+.bottombar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  background: $primary-color;
+
+  height: 56px;
+
+  position: sticky;
+  bottom: 0px;
+}
+
+.bottombar__button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.bottombar__button-icon {
+  height: 24px;
+  width: 24px;
+
+  margin-bottom: 7px;
+}
+
+.bottombar__button-text {
+  color: $primary-text-color;
+  font-size: $xsmall-font-size;
+}

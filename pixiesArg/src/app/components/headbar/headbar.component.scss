@@ -10,7 +10,7 @@
   height: 56px;
 
   position: sticky;
-  bottom: 0px;
+  top: 0px;
 }
 .headbar_title h1{
   display: flex;
@@ -18,7 +18,8 @@
   color: $primary-text-color;
   font-size: $medium-font-size;
   padding-left: 5px;
-  padding-right: 190px;
+  justify-content: space-between;
+  margin: 16em;
   }
 
 .headbar__button {

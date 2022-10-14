@@ -1,0 +1,51 @@
+@import "../../../assets/styles/main.scss";
+
+/* .collection {
+  display: flex;
+  background: $accent-link;
+  justify-content: center;
+  height: 79px;
+  position: sticky;
+  top: 0px;
+}
+/* .collection_title h1{ */
+  /* display:flex;
+  align-items:center;
+  position:sticky;
+  padding-top:40px;
+  padding-right:20px;
+  padding-left:20px;
+
+  justify-content:center;
+
+  color: $primary-text-color;
+  font-size: $mlong-font-size;
+
+} */
+
+.collection_top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.collection_top-arrow{
+  display:flex;
+  position: absolute;
+  padding-left:10px;
+
+}
+
+/* .collection_down-baul{
+  display:flex;
+  justify-content:flex-start;
+  padding-top:40px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+  height:51px;
+  width:51px;
+
+}
+ */

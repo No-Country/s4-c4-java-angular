@@ -1,4 +1,3 @@
-
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -15,11 +14,10 @@ import { CollectionComponent } from '../components/collection/collection.compone
     BottombarComponent,
     LoginComponent,
     HomeComponent,
-    HeadbarComponent
+    HeadbarComponent,
+    PixelButtonComponent,
+    CollectionComponent,
   ],
-  imports: [
-    CommonModule,
-    FeaturesRoutingModule
-  ]
+  imports: [CommonModule, FeaturesRoutingModule],
 })
-export class FeaturesModule { }
+export class FeaturesModule {}

@@ -3,7 +3,8 @@
 .headbar {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: space-between;
+  padding: 0 20px;
 
   background: $primary-color;
 
@@ -13,22 +14,16 @@
   top: 0px;
 }
 
-.headbar_title h1{
-  display: flex
-  ;
+.headbar_title h1 {
+  display: flex;
   align-items: start;
   color: $primary-text-color;
   font-size: $medium-font-size;
   padding-left: 5px;
   justify-content: space-between;
-  margin: 16em;
-  }
-
-.headbar__button {
-  padding-right: 26px;
-
 }
-.headbar__button_icon{
+
+.headbar__button_icon {
   height: 24px;
   width: 24px;
 }

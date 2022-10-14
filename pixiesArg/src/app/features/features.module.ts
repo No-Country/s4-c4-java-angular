@@ -8,6 +8,7 @@ import { HomeComponent } from './private/home/home.component';
 import { HeadbarComponent } from './../components/headbar/headbar.component';
 import { PixelButtonComponent } from '../components/pixel-button/pixel-button.component';
 import { CollectionComponent } from '../components/collection/collection.component';
+import { PixelFieldComponent } from '../components/pixel-field/pixel-field.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { CollectionComponent } from '../components/collection/collection.compone
     HeadbarComponent,
     PixelButtonComponent,
     CollectionComponent,
+    PixelFieldComponent,
   ],
   imports: [CommonModule, FeaturesRoutingModule],
 })

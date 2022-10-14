@@ -8,6 +8,7 @@ import { LoginComponent } from './public/login/login.component';
 import { HomeComponent } from './private/home/home.component';
 import { HeadbarComponent } from './../components/headbar/headbar.component';
 import { CollectionComponent } from '../components/collection/collection.component';
+import { TiendaComponent } from '../components/tienda/tienda.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CollectionComponent } from '../components/collection/collection.compone
     LoginComponent,
     HomeComponent,
     HeadbarComponent,
-    CollectionComponent
+    CollectionComponent,
+    TiendaComponent
   ],
   imports: [
     CommonModule,

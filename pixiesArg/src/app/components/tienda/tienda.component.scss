@@ -1,0 +1,15 @@
+@import "../../../assets/styles/main.scss";
+
+.collection_shop{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.collection_shop-arrow{
+  display:flex;
+  position: absolute;
+  padding-left:10px;
+
+}

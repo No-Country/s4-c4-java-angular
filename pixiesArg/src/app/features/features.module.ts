@@ -7,6 +7,7 @@ import { BottombarComponent } from '../components/bottombar/bottombar.component'
 import { LoginComponent } from './public/login/login.component';
 import { HomeComponent } from './private/home/home.component';
 import { HeadbarComponent } from './../components/headbar/headbar.component';
+import { PixelButtonComponent } from '../components/pixel-button/pixel-button.component';
 import { CollectionComponent } from '../components/collection/collection.component';
 
 @NgModule({
@@ -14,8 +15,7 @@ import { CollectionComponent } from '../components/collection/collection.compone
     BottombarComponent,
     LoginComponent,
     HomeComponent,
-    HeadbarComponent,
-    CollectionComponent
+    HeadbarComponent
   ],
   imports: [
     CommonModule,

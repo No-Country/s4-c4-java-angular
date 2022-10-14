@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { FeaturesRoutingModule } from './features-routing.module';
 import { BottombarComponent } from '../components/bottombar/bottombar.component';
@@ -20,6 +21,6 @@ import { PixelFieldComponent } from '../components/pixel-field/pixel-field.compo
     CollectionComponent,
     PixelFieldComponent,
   ],
-  imports: [CommonModule, FeaturesRoutingModule],
+  imports: [CommonModule, FeaturesRoutingModule, ReactiveFormsModule, FormsModule],
 })
 export class FeaturesModule {}

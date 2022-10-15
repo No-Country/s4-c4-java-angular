@@ -4,7 +4,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
 
   background: $primary-color;
 
@@ -15,15 +14,15 @@
 }
 
 .headbar_title h1 {
+  padding-left: 5px;
   display: flex;
   align-items: start;
   color: $primary-text-color;
   font-size: $medium-font-size;
-  padding-left: 5px;
-  justify-content: space-between;
 }
 
 .headbar__button_icon {
+  padding-right: 5px;
   height: 24px;
   width: 24px;
 }

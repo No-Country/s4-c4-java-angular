@@ -1,1 +1,21 @@
-<p>login works!</p>
+<div class="login-form">
+  <form class="login-form__container" [formGroup]="formLogin">
+    <app-pixel-field
+      class="login-form__container-input"
+      formControlName="username"
+      label="Email"
+      type="text"
+    ></app-pixel-field>
+    <app-pixel-field
+      class="login-form__container-input"
+      formControlName="password"
+      label="Password"
+      type="password"
+      hint="Minímo 8 carácteres"
+    ></app-pixel-field>
+
+    <app-pixel-button class="login-form__container-button" (click)="login()"
+      >Login</app-pixel-button
+    >
+  </form>
+</div>

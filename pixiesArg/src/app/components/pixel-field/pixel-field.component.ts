@@ -16,6 +16,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 export class PixelFieldComponent implements OnInit, ControlValueAccessor {
   @Input() label: string = '';
   @Input() type: string = 'text';
+  @Input() hint: string = '';
   field = '';
 
   ngOnInit(): void {}

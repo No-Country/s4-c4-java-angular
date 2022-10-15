@@ -18,9 +18,13 @@ export class BottombarComponent implements OnInit {
   }
 
   checkVisibility() {
-    this.routing.path() === '/login'
-      ? (this.isShow = false)
-      : (this.isShow = true);
+    this.getNonBottomRoutes() ? (this.isShow = false) : (this.isShow = true);
+  }
+
+  getNonBottomRoutes() {
+    let routes = ['/login', '/register'];
+    let url = this.routing.path();
+    return routes.includes(url);
   }
 
   logout() {

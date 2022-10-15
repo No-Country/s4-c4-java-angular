@@ -9,6 +9,7 @@ import { HomeComponent } from './private/home/home.component';
 import { PixelButtonComponent } from '../components/pixel-button/pixel-button.component';
 import { CollectionComponent } from '../components/collection/collection.component';
 import { PixelFieldComponent } from '../components/pixel-field/pixel-field.component';
+import { RegisterComponent } from './public/register/register.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { PixelFieldComponent } from '../components/pixel-field/pixel-field.compo
     PixelButtonComponent,
     CollectionComponent,
     PixelFieldComponent,
+    RegisterComponent,
   ],
   imports: [CommonModule, FeaturesRoutingModule, ReactiveFormsModule, FormsModule],
 })

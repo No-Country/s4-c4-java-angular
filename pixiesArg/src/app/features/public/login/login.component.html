@@ -1,6 +1,15 @@
 <app-collection>Login</app-collection>
 <div class="login-form">
+  <div class="login-form-sky">
+    <img src="assets/decorations/nube.svg" alt="Nube imagen" />
+  </div>
+
   <form class="login-form__container" [formGroup]="formLogin">
+    <img
+      class="login-form__container-deco-turtle"
+      src="assets/decorations/turtle.svg"
+      alt="Turtle icon"
+    />
     <app-pixel-field
       class="login-form__container-input"
       formControlName="username"
@@ -22,4 +31,7 @@
   <p class="login-form__register-form-link">
     <a routerLink="/register">¿No tenés cuenta? Create una acá</a>
   </p>
+  <div>
+    <img src="assets/decorations/goomba.svg" alt="Goomba Imagen">
+  </div>
 </div>

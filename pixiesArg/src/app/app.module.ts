@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FeaturesModule } from './features/features.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CookieModule } from 'ngx-cookie';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,7 @@ import { BottombarComponent } from './components/bottombar/bottombar.component';
     FeaturesModule,
     ReactiveFormsModule,
     HttpClientModule,
+    CookieModule.withOptions(),
   ],
   providers: [],
   bootstrap: [AppComponent],

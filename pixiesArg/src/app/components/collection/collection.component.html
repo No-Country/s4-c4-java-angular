@@ -1,7 +1,14 @@
 <div class="collection_top">
-  <img src="../../../assets/iconos/collection/coleccion.svg" alt="nube icon" />
-  <div class="collection_top-arrow">
-    <img src="../../../assets/iconos/collection/chevron-left.svg" alt="" />
-    <a (click)="redirect()" class="bottombar__button-button"></a>
+  <div class="collection_top-container" (click)="redirect()">
+    <img
+      class="collection_top-container-icon"
+      src="../../../assets/iconos/collection/chevron-left.svg"
+      alt="arrow-left"
+    />
+    <div class="collection_top-container-text">
+      <ng-content></ng-content>
+    </div>
+
+    <div></div>
   </div>
 </div>

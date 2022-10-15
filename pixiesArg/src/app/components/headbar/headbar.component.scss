@@ -8,9 +8,11 @@
   background: $primary-color;
 
   height: 56px;
+  width: 100%;
 
-  position: sticky;
+  position: fixed;
   top: 0px;
+  z-index: 15;
 }
 
 .headbar_title h1 {

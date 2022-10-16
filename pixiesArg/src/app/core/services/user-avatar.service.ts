@@ -16,7 +16,7 @@ export class UserAvatarService {
   constructor(private http: HttpClient, private cookieService: CookieService) {}
 
   getUser(): Observable<any> {
-    return this.http.get('https://pixiesapp.herokuapp.com/users', {
+    return this.http.get('https://pixiesapp.herokuapp.com/users/?id=2', {
       headers: this.headers,
     });
   }

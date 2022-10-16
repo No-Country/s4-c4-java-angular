@@ -10,8 +10,8 @@
   height: 56px;
   width: 100%;
 
-  position: fixed;
-  bottom: 0px;
+  position: sticky;
+  top: calc(100vh - 56px);
   z-index: 15;
 }
 

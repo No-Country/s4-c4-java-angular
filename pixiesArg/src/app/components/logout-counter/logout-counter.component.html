@@ -1,0 +1,47 @@
+<div class="logout">
+  <div
+    class="logout-countdown"
+    [ngClass]="{ 'logout-countdown--warning': seconds < 5 }"
+  >
+    <img
+      class="logout-countdown-avatar"
+      src="assets/game-over/Vector.png"
+      alt="Pixie suffering"
+    />
+    <div>¿Continue?</div>
+    <div>
+      {{ seconds }}
+    </div>
+  </div>
+  <div class="logout-content">
+    <div class="logout-content-question" *ngIf="seconds > 4">
+      **¿Querés salir?**
+    </div>
+    <div *ngIf="seconds < 15">
+      <img
+        class="logout-content-timer-image"
+        src="assets/background/logout1.png"
+      />
+    </div>
+    <div *ngIf="seconds < 10">
+      <img
+        class="logout-content-timer-image"
+        src="assets/background/logout2.png"
+      />
+    </div>
+    <div class="logout-content-timer-image" *ngIf="seconds < 5">
+      <img src="assets/background/logout3.png" />
+    </div>
+  </div>
+  <div class="logout__actions" *ngIf="seconds !== 0">
+    <app-pixel-button class="logout__actions-button">Volver</app-pixel-button>
+    <app-pixel-button class="logout__actions-button" [cancel]="true"
+      >Salir</app-pixel-button
+    >
+  </div>
+  <div class="logout__game-over" *ngIf="seconds === 0">
+    <app-pixel-button class="logout__actions-button" [cancel]="true"
+      >Game Over</app-pixel-button
+    >
+  </div>
+</div>

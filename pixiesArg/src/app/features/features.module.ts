@@ -11,6 +11,8 @@ import { CollectionComponent } from '../components/collection/collection.compone
 import { PixelFieldComponent } from '../components/pixel-field/pixel-field.component';
 import { RegisterComponent } from './public/register/register.component';
 import { CharacterCardComponent } from '../components/character-card/character-card.component';
+import { LogoutCounterComponent } from '../components/logout-counter/logout-counter.component';
+import { LogoutComponent } from './private/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { CharacterCardComponent } from '../components/character-card/character-c
     PixelFieldComponent,
     RegisterComponent,
     CharacterCardComponent,
+    LogoutCounterComponent,
+    LogoutComponent,
   ],
   imports: [CommonModule, FeaturesRoutingModule, ReactiveFormsModule, FormsModule],
 })

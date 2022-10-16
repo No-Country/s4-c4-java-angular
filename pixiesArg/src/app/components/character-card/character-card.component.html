@@ -1,0 +1,38 @@
+
+<div class="character-card">
+  <div class="character-card__top">
+    <img
+      class="character-card__top-image"
+      [src]="imagen64"
+      alt="Pixies image"
+    />
+  </div>
+  <div class="character-card__footer">
+    <div class="character-card__footer-likes">
+      <div class="character-card__footer-likes-amount">12048 me gusta</div>
+      <div class="character-card__footer-likes-button">
+        <img
+          (click)="toggleFavorite()"
+          *ngIf="isFavorite; else isNoFavorite"
+          class="character-card__footer-likes-button-icon--favorite"
+          src="assets/iconos/union-filled.svg"
+          alt="heart icon"
+        />
+      </div>
+    </div>
+    <div class="character-card__footer-data">
+      <p>Dueño: Paz Gonzalez</p>
+      <p>26 septiembre 2022 11:22</p>
+      <p>Token ID: 5352748251642439</p>
+    </div>
+  </div>
+</div>
+
+<ng-template #isNoFavorite>
+  <img
+    (click)="toggleFavorite()"
+    class="character-card__footer-likes-button-icon"
+    src="assets/iconos/union.svg"
+    alt="heart icon"
+  />
+</ng-template>

@@ -10,6 +10,7 @@ import { PixelButtonComponent } from '../components/pixel-button/pixel-button.co
 import { CollectionComponent } from '../components/collection/collection.component';
 import { PixelFieldComponent } from '../components/pixel-field/pixel-field.component';
 import { RegisterComponent } from './public/register/register.component';
+import { CharacterCardComponent } from '../components/character-card/character-card.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { RegisterComponent } from './public/register/register.component';
     CollectionComponent,
     PixelFieldComponent,
     RegisterComponent,
+    CharacterCardComponent,
   ],
   imports: [CommonModule, FeaturesRoutingModule, ReactiveFormsModule, FormsModule],
 })

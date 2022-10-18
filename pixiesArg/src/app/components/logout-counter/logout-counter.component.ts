@@ -6,6 +6,7 @@ import {
   OnInit,
   SimpleChanges,
 } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-logout-counter',
@@ -22,16 +23,21 @@ export class LogoutCounterComponent implements OnInit {
         this.seconds = this.seconds - 1;
         return this.seconds;
       } else {
-        console.log('Logout');
+        console.log('Me salí');
         clearInterval(interval);
         return 0;
       }
     }, 1000);
   }
 
-  constructor() {}
+  cancelLogout() {
+    this.seconds = 1800;
+    this.router.navigate(['/home']);
+  }
+
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
-    this.countDown()
+    this.countDown();
   }
 }

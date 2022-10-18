@@ -27,7 +27,4 @@ export class BottombarComponent implements OnInit {
     return routes.includes(url);
   }
 
-  logout() {
-    console.log('Salir de la app');
-  }
 }

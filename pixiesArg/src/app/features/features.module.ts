@@ -13,6 +13,8 @@ import { RegisterComponent } from './public/register/register.component';
 import { CharacterCardComponent } from '../components/character-card/character-card.component';
 import { LogoutCounterComponent } from '../components/logout-counter/logout-counter.component';
 import { LogoutComponent } from './private/logout/logout.component';
+import { MyAccountCardComponent } from '../components/my-account-card/my-account-card.component';
+import { MyAccountComponent } from './private/my-account/my-account.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { LogoutComponent } from './private/logout/logout.component';
     CharacterCardComponent,
     LogoutCounterComponent,
     LogoutComponent,
+    MyAccountCardComponent,
+    MyAccountComponent,
   ],
   imports: [CommonModule, FeaturesRoutingModule, ReactiveFormsModule, FormsModule],
 })

@@ -1,1 +1,21 @@
-<p>store-item works!</p>
+<div class="store-item">
+  <div class="store-item__header">
+    <div class="store-item__header-name">{{ item.name }}</div>
+    <div class="store-item__header-id">#{{ item.id }}</div>
+  </div>
+  <div class="store-item__image">
+    <img
+      class="store-item__image-png"
+      src="assets/images/store-avatar.png"
+      alt="Avatar"
+    />
+    <img
+      class="store-item__image-item"
+      [src]="item.image"
+      alt="Item"
+    />
+  </div>
+  <div class="store-item__footer">
+    <div class="store-item__footer-amount">${{item.price}}</div>
+  </div>
+</div>

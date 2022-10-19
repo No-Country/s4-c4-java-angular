@@ -1,0 +1,22 @@
+.store {
+  display: flex;
+  flex-wrap: wrap;
+  &__item {
+    margin: 20px;
+  }
+
+  &__select {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    &-input {
+      width: 150px;
+      height: 20px;
+      font-family: "Press Start 2P", cursive;
+      font-size: 10px;
+      &-option {
+        font-size: 10px;
+      }
+    }
+  }
+}

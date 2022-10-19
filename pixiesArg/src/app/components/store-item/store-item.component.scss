@@ -1,0 +1,52 @@
+@import "/src/assets/styles/main.scss";
+
+.store-item {
+  position: relative;
+  height: 150px;
+  width: 140px;
+  border: 2px solid $dark-grey-color;
+
+  &__header {
+    font-weight: 400;
+    font-size: 9px;
+    color: $dark-grey-text-color;
+    margin: 5px;
+  }
+  &__image {
+    position: relative;
+    &-png {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100px;
+      width: 130px;
+      object-fit: contain;
+      object-position: center;
+    }
+    &-item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100px;
+      width: 130px;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: $background-blue;
+    height: 36px;
+    padding: 5px auto;
+
+    &-amount {
+      color: $primary-text-color;
+    }
+  }
+}

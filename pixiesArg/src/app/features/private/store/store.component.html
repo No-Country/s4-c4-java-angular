@@ -1,1 +1,20 @@
-<app-store-item></app-store-item>
+<app-collection>Tienda</app-collection>
+<div class="store__select">
+  <select class="store__select-input" name="asset" id="asset" (change)="onChange($event)">
+    <option class="store__select-input-option" >Seleccionar equipo</option>
+    <option class="store__select-input-option"  value="hair">Cabello</option>
+    <option class="store__select-input-option"  value="head">Cabeza</option>
+    <option class="store__select-input-option" value="body">Cuerpo</option>
+    <option class="store__select-input-option" value="hand">Manos</option>
+    <option class="store__select-input-option" value="legs">Piernas</option>
+    <option class="store__select-input-option" value="pets">Mascotas</option>
+  </select>
+</div>
+
+<div class="store">
+  <ng-container *ngIf="items">
+    <div class="store__item" *ngFor="let item of iterable">
+      <app-store-item [item]="item"></app-store-item>
+    </div>
+  </ng-container>
+</div>

@@ -9,7 +9,7 @@ import { HomeComponent } from './private/home/home.component';
 import { PixelButtonComponent } from '../components/pixel-button/pixel-button.component';
 import { CollectionComponent } from '../components/collection/collection.component';
 import { TiendaComponent } from '../components/tienda/tienda.component';
-import { HeadbarComponent } from '../components/headbar/headbar.component';
+
 import { OnBoardingComponent } from '../components/on-boarding/on-boarding.component';
 import { OnBoardingPage1Component } from '../components/on-boarding-page1/on-boarding-page1.component';
 import { OnBoardingPage2Component } from '../components/on-boarding-page2/on-boarding-page2.component';
@@ -25,7 +25,7 @@ import { LogoutComponent } from './private/logout/logout.component';
   declarations: [
 
     HomeComponent,
-    HeadbarComponent,
+
     CollectionComponent,
     TiendaComponent,
     OnBoardingComponent,

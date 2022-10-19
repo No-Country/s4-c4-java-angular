@@ -13,5 +13,6 @@ export class CollectionComponent implements OnInit {
     this.location.back();
   }
 
+
   ngOnInit(): void {}
 }

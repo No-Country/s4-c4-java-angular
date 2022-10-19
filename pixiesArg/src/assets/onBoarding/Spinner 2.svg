@@ -1,0 +1,28 @@
+<svg width="252" height="66" viewBox="0 0 252 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="59" y="6" width="173" height="4" fill="#3E3E3E"/>
+<rect x="59" y="58" width="173" height="4" fill="#3E3E3E"/>
+<rect x="232" y="10" width="8" height="4" fill="#3E3E3E"/>
+<rect x="232" y="54" width="8" height="4" fill="#3E3E3E"/>
+<rect x="240" y="14" width="4" height="4" fill="#3E3E3E"/>
+<rect x="240" y="50" width="4" height="4" fill="#3E3E3E"/>
+<rect x="244" y="18" width="4" height="12" fill="#3E3E3E"/>
+<rect x="244" y="38" width="4" height="12" fill="#3E3E3E"/>
+<rect x="248" y="30" width="4" height="8" fill="#3E3E3E"/>
+<rect x="59" y="58" width="8" height="4" transform="rotate(-180 59 58)" fill="#3E3E3E"/>
+<rect x="59" y="14" width="8" height="4" transform="rotate(-180 59 14)" fill="#3E3E3E"/>
+<rect x="51" y="54" width="4" height="4" transform="rotate(-180 51 54)" fill="#3E3E3E"/>
+<rect x="51" y="18" width="4" height="4" transform="rotate(-180 51 18)" fill="#3E3E3E"/>
+<rect x="47" y="50" width="4" height="12" transform="rotate(-180 47 50)" fill="#3E3E3E"/>
+<rect x="47" y="30" width="4" height="12" transform="rotate(-180 47 30)" fill="#3E3E3E"/>
+<rect x="43" y="38" width="4" height="8" transform="rotate(-180 43 38)" fill="#3E3E3E"/>
+<rect x="73" y="7" width="4" height="53" fill="#3E3E3E"/>
+<rect x="109" y="7" width="4" height="53" fill="#3E3E3E"/>
+<rect x="145" y="7" width="4" height="53" fill="#3E3E3E"/>
+<rect x="181" y="7" width="4" height="53" fill="#3E3E3E"/>
+<rect x="217" y="7" width="4" height="53" fill="#3E3E3E"/>
+<path d="M14 0.5H26L25 5L33.5 14.5H38.5L47.5 5H58L66.5 13.5L67 32L39.5 60H33.5L19.5 46L13 39.5V33H0L0.5 13.5L6.5 13L7 7L13.5 6.5L14 0.5Z" fill="#C40951"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M26.3999 0H13.1999V6.59996H6.60016V13.2H13.2002V6.6H26.3998V13.2H32.9998V6.59996H26.3999V0ZM59.3999 0H46.1999V6.59996H39.6002V13.2H46.2002V6.6H59.3998V13.2H65.9998V6.59996H59.3999V0ZM6.6 13.2H0V33H6.6V13.2ZM6.60016 33H13.2002V39.6H19.7999V46.2H13.1999V39.6H6.60016V33ZM19.8001 46.2H26.4001V52.8H32.9998V59.4H26.3998V52.8H19.8001V46.2ZM33 59.4H39.6V66H33V59.4ZM52.7999 52.8H46.2002V59.4H39.6002V52.8H46.1999V46.2H52.7999V52.8ZM65.9998 39.6H59.4001V46.2H52.8001V39.6H59.3998V33H65.9998V39.6ZM72.6 13.2H66V33H72.6V13.2ZM39.6 13.2H33V19.8H39.6V13.2Z" fill="#3E3E3E"/>
+<rect x="19" y="15" width="4" height="4" fill="white"/>
+<rect x="15" y="19" width="4" height="4" fill="white"/>
+<rect x="15" y="23" width="4" height="4" fill="white"/>
+</svg>

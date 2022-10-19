@@ -1,0 +1,37 @@
+.page{
+  display:flex;
+  flex-direction:column;
+  height: 650px;
+
+  }
+  .page_onboarding{
+    display:flex;
+    padding-top: 60px;
+    padding-left: 70px;
+    width: 226px;
+    height: 54px;
+
+  }
+  .page_onboarding-fondo{
+    align-items: center;
+    margin-top: 50px;
+    padding-left: 40px;
+
+  }
+
+  .page_onboarding-jump{
+    align-items: center;
+    margin-top: 60px;
+    padding-left: 130px;
+    width: 122px;
+    height: 18px;
+
+  }
+
+ .page_onboarding-icon{
+
+  align-content: flex-start;
+  padding-left: 10px;
+
+
+  }

@@ -1,0 +1,27 @@
+@import "/src/assets/styles/main.scss";
+
+.pixel-button {
+  padding: 10px;
+  background: none;
+  border: none;
+  background-image: url("../../../assets/button-frame/button-frame.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 185px;
+  background-color: $background-green;
+  border-radius: 50px;
+  overflow: hidden;
+  &--cancel {
+    background-color: $primary-color;
+  }
+  &__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Press Start 2P", cursive;
+    font-size: $small-font-size;
+    font-weight: 400;
+    color: $primary-text-color;
+  }
+}

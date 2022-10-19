@@ -1,51 +1,35 @@
 @import "../../../assets/styles/main.scss";
 
-/* .collection {
-  display: flex;
-  background: $accent-link;
-  justify-content: center;
-  height: 79px;
-  position: sticky;
-  top: 0px;
-}
-/* .collection_title h1{ */
-  /* display:flex;
-  align-items:center;
-  position:sticky;
-  padding-top:40px;
-  padding-right:20px;
-  padding-left:20px;
-
-  justify-content:center;
-
-  color: $primary-text-color;
-  font-size: $mlong-font-size;
-
-} */
-
-.collection_top{
+.collection_top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  width: 100vw;
+  background-image: url("../../../assets/iconos/collection/fondocoleccion.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 79px;
+  position: sticky;
+  top: 56px;
+  z-index: 15;
 }
 
-.collection_top-arrow{
-  display:flex;
-  position: absolute;
-  padding-left:10px;
+.collection_top-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
 
+  &-icon {
+    margin-bottom: 50px;
+  }
+
+  &-text {
+    color: $primary-text-color;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
 }
-
-/* .collection_down-baul{
-  display:flex;
-  justify-content:flex-start;
-  padding-top:40px;
-  padding-left: 0px;
-  padding-right: 0px;
-
-  height:51px;
-  width:51px;
-
-}
- */

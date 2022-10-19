@@ -1,0 +1,36 @@
+<app-collection>Registro</app-collection>
+<form class="register-form" [formGroup]="registerForm" autocomplete="off">
+  <app-pixel-field
+    class="register-form__input"
+    label="Nombre"
+    formControlName="firstName"
+  ></app-pixel-field>
+  <app-pixel-field
+    class="register-form__input"
+    label="Apellido"
+    formControlName="lastName"
+  ></app-pixel-field>
+  <app-pixel-field
+    class="register-form__input"
+    label="Email"
+    formControlName="email"
+  ></app-pixel-field>
+  <app-pixel-field
+    class="register-form__input"
+    label="País"
+    formControlName="country"
+  ></app-pixel-field>
+  <app-pixel-field
+    class="register-form__input"
+    label="Contraseña"
+    type="password"
+    formControlName="password"
+    hint="Minímo 8 carácteres"
+  ></app-pixel-field>
+  <app-pixel-button class="register-form__button" (click)="register()"
+    >Registrarse</app-pixel-button
+  >
+</form>
+<div class="register-form__login-link">
+  <a routerLink="/login">¿Ya tenés cuenta? Iniciá sesión</a>
+</div>

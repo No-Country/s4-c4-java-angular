@@ -1,1 +1,37 @@
-<p>login works!</p>
+<app-collection>Login</app-collection>
+<div class="login-form">
+  <div class="login-form-sky">
+    <img src="assets/decorations/nube.svg" alt="Nube imagen" />
+  </div>
+
+  <form class="login-form__container" [formGroup]="formLogin">
+    <img
+      class="login-form__container-deco-turtle"
+      src="assets/decorations/turtle.svg"
+      alt="Turtle icon"
+    />
+    <app-pixel-field
+      class="login-form__container-input"
+      formControlName="username"
+      label="Email"
+      type="text"
+    ></app-pixel-field>
+    <app-pixel-field
+      class="login-form__container-input"
+      formControlName="password"
+      label="Password"
+      type="password"
+      hint="Minímo 8 carácteres"
+    ></app-pixel-field>
+
+    <app-pixel-button class="login-form__container-button" (click)="login()"
+      >Login</app-pixel-button
+    >
+  </form>
+  <p class="login-form__register-form-link">
+    <a routerLink="/register">¿No tenés cuenta? Create una acá</a>
+  </p>
+  <div>
+    <img src="assets/decorations/goomba.svg" alt="Goomba Imagen">
+  </div>
+</div>

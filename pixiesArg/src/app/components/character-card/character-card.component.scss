@@ -1,0 +1,45 @@
+@import "/src/assets/styles/main.scss";
+
+.character-card {
+  width: 310px;
+  height: 350px;
+  border: 2px solid #3e3e3e;
+  border-radius: 5px;
+
+  &__top {
+    background: $background-blue;
+    height: 245px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-image {
+      height: 100%;
+    }
+  }
+}
+
+.character-card__footer {
+  padding: 15px;
+  &-likes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-amount {
+      font-weight: 400;
+      font-size: 14px;
+    }
+    &-button-icon {
+      filter: brightness(0) saturate(100%) invert(0%) sepia(21%) saturate(167%)
+        hue-rotate(265deg) contrast(105%);
+    }
+  }
+  &-data {
+    font-weight: 400;
+    font-size: 9px;
+    color: $dark-grey-text-color;
+  }
+}
+
+

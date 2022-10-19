@@ -1,0 +1,14 @@
+<div class="pixel-field">
+  <label class="pixel-field__label" for="{{ label }}">{{ label }}</label>
+  <input
+    autocomplete="off"
+    [(ngModel)]="value"
+    class="pixel-field__input"
+    id="{{ label }}"
+    type="{{ type }}"
+  />
+  <img class="pixel-field__image" src="assets/utils/bottom-field.jpg" alt="" />
+  <div *ngIf="hint" class="pixel-field__hint">
+    <div>{{ hint }}</div>
+  </div>
+</div>

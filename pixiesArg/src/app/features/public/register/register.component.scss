@@ -1,0 +1,27 @@
+@import "/src/assets/styles/main.scss";
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px auto;
+
+  &__input {
+    margin-bottom: 12px;
+  }
+  &__button {
+    margin-top: 25px;
+  }
+  &__login-link {
+    font-weight: 400;
+    font-size: 9px;
+    margin-top: 10px;
+    
+
+    text-align: center;
+    a {
+      text-decoration: none;
+      color: $green-text-color;
+    }
+  }
+}

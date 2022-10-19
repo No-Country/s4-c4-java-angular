@@ -8,9 +8,11 @@
   background: $primary-color;
 
   height: 56px;
+  width: 100%;
 
   position: sticky;
-  bottom: 0px;
+  top: calc(100vh - 56px);
+  z-index: 15;
 }
 
 .bottombar__button {

@@ -1,0 +1,39 @@
+<div class="my-account-card" *ngIf="myData">
+  <div class="my-account-card__header">
+    <div class="my-account-card__header-data">
+      <div class="my-account-card__header-data-name">
+        {{ myData.firstName }} {{ myData.lastName }}
+      </div>
+      <div class="my-account-card__header-data-email">{{ myData }}</div>
+      <div class="my-account-card__header-data-country">
+        {{ myData.country }}
+      </div>
+    </div>
+    <div class="my-account-card__header-profile">
+      <img
+        class="my-account-card__header-profile-image"
+        [src]="myData.avatar.image"
+        alt="pixie image"
+      />
+    </div>
+  </div>
+  <div class="my-account-card__pixie">
+    <img
+      class="my-account-card__pixie-image"
+      [src]="myData.avatar.image"
+      alt="My pixie"
+    />
+  </div>
+  <div class="my-account-card__money">
+    <div class="my-account-card__money-image">
+      <img src="assets/iconos/coins.png" alt="Icono Monedas" />
+    </div>
+    <div class="my-account-card__money-data">
+      <div class="my-account-card__money-data-amount">{{ myData.money }}</div>
+      <div class="my-account-card__money-data-text">Monedas Disponibles</div>
+    </div>
+    <button routerLink="/store" class="my-account-card__money-button">
+      <img src="assets/iconos/fab-pixelado.svg" alt="Boton Tienda" />
+    </button>
+  </div>
+</div>

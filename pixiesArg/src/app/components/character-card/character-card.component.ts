@@ -20,11 +20,7 @@ export class CharacterCardComponent implements OnInit {
     this.userAvatar.getUser().subscribe({
       next: (res) => {
         console.log(res);
-        this.char = res[9];
-      },
-      complete: () => {
-        console.log(this.char);
-      },
+      }
     });
   }
 }

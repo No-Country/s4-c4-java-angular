@@ -7,16 +7,16 @@ import { CookieService } from 'ngx-cookie';
 @Injectable({
   providedIn: 'root',
 })
-export class UserAvatarService {
+export class StoreService {
   token = this.cookieService.get('token');
   headers = new HttpHeaders({
-    'Authorization': `Bearer ${this.token}`
-  })
+    Authorization: `Bearer ${this.token}`,
+  });
 
   constructor(private http: HttpClient, private cookieService: CookieService) {}
 
-  getUser(): Observable<any> {
-    return this.http.get('https://pixiesapp.herokuapp.com/users/?id=2', {
+  getStore(): Observable<any> {
+    return this.http.get('https://pixiesapp.herokuapp.com/store/1', {
       headers: this.headers,
     });
   }

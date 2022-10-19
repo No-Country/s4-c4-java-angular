@@ -20,6 +20,10 @@ import { RegisterComponent } from './public/register/register.component';
 import { CharacterCardComponent } from '../components/character-card/character-card.component';
 import { LogoutCounterComponent } from '../components/logout-counter/logout-counter.component';
 import { LogoutComponent } from './private/logout/logout.component';
+import { MyAccountCardComponent } from '../components/my-account-card/my-account-card.component';
+import { MyAccountComponent } from './private/my-account/my-account.component';
+import { StoreComponent } from './private/store/store.component';
+import { StoreItemComponent } from '../components/store-item/store-item.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +44,11 @@ import { LogoutComponent } from './private/logout/logout.component';
     LogoutCounterComponent,
     LogoutComponent,
     PixelButtonComponent,
-    LoginComponent
+    LoginComponent,
+    MyAccountCardComponent,
+    MyAccountComponent,
+    StoreComponent,
+    StoreItemComponent,
   ],
   imports: [CommonModule, FeaturesRoutingModule, ReactiveFormsModule, FormsModule],
 })

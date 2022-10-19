@@ -34,13 +34,21 @@
     </div>
   </div>
   <div class="logout__actions" *ngIf="seconds !== 0">
-    <app-pixel-button class="logout__actions-button">Volver</app-pixel-button>
-    <app-pixel-button class="logout__actions-button" [cancel]="true"
+    <app-pixel-button (click)="cancelLogout()" class="logout__actions-button"
+      >Volver</app-pixel-button
+    >
+    <app-pixel-button
+      routerLink="/login"
+      class="logout__actions-button"
+      [cancel]="true"
       >Salir</app-pixel-button
     >
   </div>
   <div class="logout__game-over" *ngIf="seconds === 0">
-    <app-pixel-button class="logout__actions-button" [cancel]="true"
+    <app-pixel-button
+      routerLink="/login"
+      class="logout__actions-button"
+      [cancel]="true"
       >Game Over</app-pixel-button
     >
   </div>

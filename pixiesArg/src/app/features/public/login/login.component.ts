@@ -32,6 +32,7 @@ export class LoginComponent implements OnInit {
     this.authService.postLogin(this.formLogin.value).subscribe({
       next: (res) => {
         this.cookieService.put('token', res.token);
+        this.cookieService.put('id', res.id);
         this.router.navigate(['/home']);
       },
     });

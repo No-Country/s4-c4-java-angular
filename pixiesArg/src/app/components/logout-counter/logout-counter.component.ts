@@ -2,7 +2,7 @@ import { getLocaleTimeFormat } from '@angular/common';
 import {
   Component,
   Input,
-  OnChanges,
+  OnDestroy,
   OnInit,
   SimpleChanges,
 } from '@angular/core';
@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
   templateUrl: './logout-counter.component.html',
   styleUrls: ['./logout-counter.component.scss'],
 })
-export class LogoutCounterComponent implements OnInit {
+export class LogoutCounterComponent implements OnInit, OnDestroy {
   ClockCounter = new Date();
   @Input() seconds: number = 15;
 
@@ -39,5 +39,9 @@ export class LogoutCounterComponent implements OnInit {
 
   ngOnInit(): void {
     this.countDown();
+  }
+
+  ngOnDestroy(): void {
+    this.seconds = 1800;
   }
 }

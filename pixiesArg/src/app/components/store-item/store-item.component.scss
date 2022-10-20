@@ -31,6 +31,11 @@
       width: 130px;
       object-fit: contain;
       object-position: center;
+      &--sold {
+        z-index: 10;
+        top: -30px;
+        left: 5px;
+      }
     }
   }
 

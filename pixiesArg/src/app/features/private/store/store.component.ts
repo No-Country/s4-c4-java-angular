@@ -10,19 +10,22 @@ import { Assets } from './Assets';
 export class StoreComponent implements OnInit {
   items!: Assets;
   iterable: any[] | undefined = [];
+  assetType: string = '';
 
   constructor(private store: StoreService) {}
 
   ngOnInit(): void {
     this.store.getStore().subscribe({
       next: (res) => {
-        console.log(res);
         this.items = res;
       },
     });
   }
 
+
   onChange(event: any) {
+    this.assetType = event.target.value;
+
     switch (event.target.value) {
       case 'head':
         this.iterable = this.items.head;

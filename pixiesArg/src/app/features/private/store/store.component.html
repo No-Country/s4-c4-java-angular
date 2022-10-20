@@ -14,7 +14,7 @@
 <div class="store">
   <ng-container *ngIf="items">
     <div class="store__item" *ngFor="let item of iterable">
-      <app-store-item [item]="item"></app-store-item>
+      <app-store-item [item]="item" [type]="assetType"></app-store-item>
     </div>
   </ng-container>
 </div>

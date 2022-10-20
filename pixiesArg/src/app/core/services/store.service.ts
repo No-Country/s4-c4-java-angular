@@ -20,4 +20,14 @@ export class StoreService {
       headers: this.headers,
     });
   }
+
+  buyItem(type: string, id: number, user: number, item: any): Observable<any> {
+    return this.http.put(
+      `https://pixiesapp.herokuapp.com/inventory/${type}/?${type}=${id}&user=${user}`,
+      item,
+      {
+        headers: this.headers,
+      }
+    );
+  }
 }

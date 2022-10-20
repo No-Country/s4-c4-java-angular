@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CollectionViewComponent } from './private/collection/collection-view.component';
 import { HomeComponent } from './private/home/home.component';
 import { LogoutComponent } from './private/logout/logout.component';
 import { MyAccountComponent } from './private/my-account/my-account.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'logout', component: LogoutComponent },
   { path: 'my-account', component: MyAccountComponent },
   { path: 'store', component: StoreComponent },
+  { path: 'collection', component: CollectionViewComponent },
 ];
 
 @NgModule({

@@ -5,6 +5,7 @@
   height: 350px;
   border: 2px solid #3e3e3e;
   border-radius: 5px;
+  margin: 20px auto;
 
   &__top {
     background: $background-blue;
@@ -13,9 +14,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 
     &-image {
       height: 100%;
+    }
+    &-asset {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      z-index: 10;
     }
   }
 }
@@ -41,5 +50,3 @@
     color: $dark-grey-text-color;
   }
 }
-
-

@@ -25,5 +25,9 @@ export class UserAvatarService {
     );
   }
 
-  
+  allUsers(): Observable<any> {
+    return this.http.get(`https://pixiesapp.herokuapp.com/users/all`, {
+      headers: this.headers,
+    });
+  }
 }

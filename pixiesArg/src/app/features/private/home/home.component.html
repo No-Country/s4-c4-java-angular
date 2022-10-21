@@ -1,3 +1,6 @@
 <div style="margin: 30px">
-  <app-character-card></app-character-card>
+  <app-character-card
+    *ngFor="let avatar of avatars"
+    [avatar]="avatar"
+  ></app-character-card>
 </div>

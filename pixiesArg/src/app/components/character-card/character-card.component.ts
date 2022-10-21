@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { UserAvatarService } from 'src/app/core/services/user-avatar.service';
 
 @Component({
@@ -8,19 +8,33 @@ import { UserAvatarService } from 'src/app/core/services/user-avatar.service';
 })
 export class CharacterCardComponent implements OnInit {
   constructor(private userAvatar: UserAvatarService) {}
-  char: any;
+
+  @Input() avatar: any;
+
+  id: number = Math.floor(Math.random() * 1000000);
 
   toggleFavorite() {
     this.isFavorite = !this.isFavorite;
   }
 
-  isFavorite: boolean = true;
+  myUser: any;
+
+  isFavorite: boolean = false;
 
   ngOnInit(): void {
     this.userAvatar.getUser().subscribe({
       next: (res) => {
-        console.log(res);
-      }
+        this.myUser = res;
+      },
+      complete: () => {
+        this.checkIsFavorite();
+      },
     });
+  }
+
+  checkIsFavorite() {
+    // if (this.myUser.idFavorite.contains(this.avatar.avatar.id)) {
+    //   this.isFavorite = true;
+    // }
   }
 }

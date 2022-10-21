@@ -1,10 +1,18 @@
-
 <div class="character-card">
   <div class="character-card__top">
     <img
       class="character-card__top-image"
+      [src]="avatar.avatar.image"
       alt="Pixies image"
     />
+    <ng-container *ngIf="avatar.avatar.equip.length !== 0">
+      <img
+        *ngFor="let item of avatar.avatar.equip"
+        class="character-card__top-asset"
+        [src]="item.image"
+        alt="asset"
+      />
+    </ng-container>
   </div>
   <div class="character-card__footer">
     <div class="character-card__footer-likes">
@@ -20,9 +28,9 @@
       </div>
     </div>
     <div class="character-card__footer-data">
-      <p>Dueño: Paz Gonzalez</p>
-      <p>26 septiembre 2022 11:22</p>
-      <p>Token ID: 5352748251642439</p>
+      <p>Dueño: {{ avatar.firstName }} {{ avatar.lastName }}</p>
+      <p>País: {{ avatar.country }}</p>
+      <p>Token ID: {{ id }}</p>
     </div>
   </div>
 </div>

@@ -50,3 +50,8 @@
     color: $dark-grey-text-color;
   }
 }
+
+.unfilled {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(7500%)
+    hue-rotate(122deg) brightness(86%) contrast(104%);
+}

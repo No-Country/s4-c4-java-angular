@@ -5,9 +5,9 @@
       [src]="avatar.avatar.image"
       alt="Pixies image"
     />
-    <ng-container *ngIf="avatar.avatar.equip.length !== 0">
+    <ng-container *ngFor="let item of avatar.assets">
       <img
-        *ngFor="let item of avatar.avatar.equip"
+        *ngIf="item.equipped"
         class="character-card__top-asset"
         [src]="item.image"
         alt="asset"
@@ -20,9 +20,9 @@
       <div class="character-card__footer-likes-button">
         <img
           (click)="toggleFavorite()"
-          *ngIf="isFavorite"
-          class="character-card__footer-likes-button-icon--favorite"
-          src="assets/iconos/union-filled.svg"
+          *ngIf=" isFavorite ; else isFavoriteBlock"
+          class="character-card__footer-likes-button-icon--favorite unfilled"
+          src="assets/iconos/union.svg"
           alt="heart icon"
         />
       </div>
@@ -34,3 +34,11 @@
     </div>
   </div>
 </div>
+
+<ng-template #isFavoriteBlock>
+  <img
+    class="character-card__footer-likes-button-icon--favorite"
+    src="assets/iconos/union-filled.svg"
+    alt="heart icon"
+  />
+</ng-template>

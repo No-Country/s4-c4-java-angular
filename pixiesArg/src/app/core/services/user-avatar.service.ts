@@ -9,7 +9,7 @@ import { CookieService } from 'ngx-cookie';
 })
 export class UserAvatarService {
   token = this.cookieService.get('token');
-  id = this.cookieService.get('id');
+  id = localStorage.getItem('id');
   headers = new HttpHeaders({
     Authorization: `Bearer ${this.token}`,
   });

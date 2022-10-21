@@ -18,5 +18,11 @@ export class HomeComponent implements OnInit {
         this.avatars = res;
       },
     });
+
+    this.userAvatars.getUser().subscribe({
+      next: (res) => {
+        localStorage.setItem('avatarId', res.avatar.id);
+      },
+    });
   }
 }

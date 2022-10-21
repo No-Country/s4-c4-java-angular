@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { FavoriteService } from 'src/app/core/services/favorite.service';
 import { UserAvatarService } from 'src/app/core/services/user-avatar.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-character-card',
@@ -7,19 +9,27 @@ import { UserAvatarService } from 'src/app/core/services/user-avatar.service';
   styleUrls: ['./character-card.component.scss'],
 })
 export class CharacterCardComponent implements OnInit {
-  constructor(private userAvatar: UserAvatarService) {}
+  constructor(
+    private userAvatar: UserAvatarService,
+    private favoriteService: FavoriteService
+  ) {}
 
   @Input() avatar: any;
 
   id: number = Math.floor(Math.random() * 1000000);
 
   toggleFavorite() {
-    this.isFavorite = !this.isFavorite;
+    this.isFavorite = true;
+    this.favoriteService.postFavorite(this.avatar.idUser).subscribe({
+      next: (res) => {
+        console.log(res);
+      },
+    });
   }
 
   myUser: any;
 
-  isFavorite: boolean = false;
+  isFavorite: boolean = true;
 
   ngOnInit(): void {
     this.userAvatar.getUser().subscribe({
@@ -30,6 +40,7 @@ export class CharacterCardComponent implements OnInit {
         this.checkIsFavorite();
       },
     });
+    console.log(this.avatar.assets)
   }
 
   checkIsFavorite() {

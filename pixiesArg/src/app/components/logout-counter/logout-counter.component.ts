@@ -42,6 +42,7 @@ export class LogoutCounterComponent implements OnInit, OnDestroy {
 
   logout() {
     this.cookieService.removeAll();
+    localStorage.clear();
     this.router.navigate(['/login']);
   }
 

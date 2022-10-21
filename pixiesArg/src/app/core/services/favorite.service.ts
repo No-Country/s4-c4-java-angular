@@ -7,27 +7,19 @@ import { CookieService } from 'ngx-cookie';
 @Injectable({
   providedIn: 'root',
 })
-export class StoreService {
+export class FavoriteService {
   token = this.cookieService.get('token');
-
-  idUser = localStorage.getItem('id');
-
+  id = localStorage.getItem('id')
   headers = new HttpHeaders({
     Authorization: `Bearer ${this.token}`,
   });
 
   constructor(private http: HttpClient, private cookieService: CookieService) {}
 
-  getStore(): Observable<any> {
-    return this.http.get('https://pixiesapp.herokuapp.com/store/1', {
-      headers: this.headers,
-    });
-  }
-
-  buyItem(type: string, id: number, user: number, item: any): Observable<any> {
+  postFavorite(avatarLiked: any): Observable<any> {
     return this.http.put(
-      `https://pixiesapp.herokuapp.com/inventory/${type}/?${type}=${id}&user=${this.idUser}`,
-      item,
+      `https://pixiesapp.herokuapp.com/likes/?favorite=${avatarLiked}&user=${this.id}`,
+      'BODY',
       {
         headers: this.headers,
       }

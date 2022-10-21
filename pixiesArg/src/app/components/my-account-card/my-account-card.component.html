@@ -15,12 +15,14 @@
         [src]="myData.avatar.image"
         alt="pixie image"
       />
-      <img
-      class="my-account-card__header-profile-image-asset"
-      *ngFor="let item of myData.avatar.equip"
-      [src]="item.image"
-      alt="pixie image"
-    />
+      <ng-container *ngFor="let item of myData.assets">
+        <img
+          *ngIf="item.equipped"
+          class="my-account-card__header-profile-image-asset"
+          [src]="item.image"
+          alt="pixie image"
+        />
+      </ng-container>
     </div>
   </div>
   <div class="my-account-card__pixie">
@@ -29,12 +31,14 @@
       [src]="myData.avatar.image"
       alt="My pixie"
     />
-    <img
-    *ngFor="let item of myData.avatar.equip"
-    class="my-account-card__pixie-image"
-    [src]="item.image"
-    alt="My pixie"
-  />
+    <ng-container *ngFor="let item of myData.assets">
+      <img
+        *ngIf="item.equipped"
+        class="my-account-card__pixie-image"
+        [src]="item.image"
+        alt="My pixie"
+      />
+    </ng-container>
   </div>
   <div class="my-account-card__money">
     <div class="my-account-card__money-image">

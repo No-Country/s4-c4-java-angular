@@ -17,7 +17,7 @@
       />
     </div>
 
-    <ng-container *ngIf="item.isAvailable; else unEquipBlock">
+    <ng-container *ngIf="!item.equipped; else unEquipBlock">
       <div class="collection-card__footer">
         <div (click)="equip(item)" class="collection-card__footer-amount">
           Equipar

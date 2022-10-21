@@ -9,7 +9,8 @@ import { CookieService } from 'ngx-cookie';
 })
 export class CollectionService {
   token = this.cookieService.get('token');
-  id = this.cookieService.get('id');
+  id = localStorage.getItem('id')
+  avatarId = localStorage.getItem('avatarId')
 
   headers = new HttpHeaders({
     Authorization: `Bearer ${this.token}`,
@@ -19,7 +20,7 @@ export class CollectionService {
 
   putEquip(idEquip: number, item: any): Observable<any> {
     return this.http.put(
-      `https://pixiesapp.herokuapp.com/equip/?id=${idEquip}&idAvatar=${this.id}`,
+      `https://pixiesapp.herokuapp.com/equip/?id=${idEquip}`,
       item,
       {
         headers: this.headers,

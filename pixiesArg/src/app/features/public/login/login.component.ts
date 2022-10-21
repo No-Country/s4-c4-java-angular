@@ -23,16 +23,17 @@ export class LoginComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {}
+
   getCookie(key: string) {
     return this.cookieService.get(key);
   }
 
   login() {
-    console.log(this.formLogin.value);
     this.authService.postLogin(this.formLogin.value).subscribe({
       next: (res) => {
+        console.log('response login', res);
         this.cookieService.put('token', res.token);
-        this.cookieService.put('id', res.id);
+        localStorage.setItem('id', res.id);
         this.router.navigate(['/home']);
       },
     });

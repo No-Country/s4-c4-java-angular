@@ -1,3 +1,12 @@
 main {
-  margin-bottom: 15px;
+  padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  app-spinner {
+    position: absolute;
+    left: 45px;
+    top: 50%;
+    z-index: 100;
+  }
 }

@@ -31,28 +31,29 @@
   }
 
   .button_inicio{
-    background-color: #4CAF50; /* Green */
-    border-radius: black 50px 50px 50px 50px ;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-family: "Press Start 2P", cursive;
-    font-size: $small-font-size;
-    width: 149px;
-    height: 56px;
+  padding: 10px;
+  background: none;
+  border: none;
+  background-image: url("../../../assets/button-frame/button-frame.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 170px;
+  color:$primary-text-color;
+  background-color:$background-green;
+  border-radius: 40px;
+  font-family: "Press Start 2P", cursive;
   }
   .button_registrar{
-    background-color: #ee1b1b; /* Green */
-    border-radius: black 50px 50px 50px 50px ;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-family: "Press Start 2P", cursive;
-    font-size: $small-font-size;
-    width: 149px;
-    height: 56px;
+  background: none;
+  border: none;
+  background-image: url("../../../assets/button-frame/button-frame.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 170px;
+  color:$primary-text-color;
+  background-color: $primary-color; /* Green */
+  border-radius: 40px;
+  font-family: "Press Start 2P", cursive;
   }

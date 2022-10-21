@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { HeadbarComponent } from './components/headbar/headbar.component';
 import { BottombarComponent } from './components/bottombar/bottombar.component';
 
+
 @NgModule({
   declarations: [AppComponent, HeadbarComponent, BottombarComponent],
   imports: [

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CollectionService } from 'src/app/core/services/collection.service';
 import { UserAvatarService } from 'src/app/core/services/user-avatar.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-collection-card',
@@ -16,6 +17,10 @@ export class CollectionCardComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.getCollection();
+  }
+
+  getCollection() {
     this.userService.getUser().subscribe({
       next: (res) => {
         console.log(res.assets);
@@ -26,8 +31,26 @@ export class CollectionCardComponent implements OnInit {
 
   equip(item: any) {
     this.collectionService.putEquip(item.id, item).subscribe({
-      next: (res) => {
-        console.log(res);
+      next: () => {
+        this.getCollection();
+        Swal.fire({
+          icon: 'success',
+          title: 'Item equipado',
+          heightAuto: false
+        })
+      },
+    });
+  }
+
+  unequip(item: any) {
+    this.collectionService.unEquip(item.id, item).subscribe({
+      next: () => {
+        this.getCollection();
+        Swal.fire({
+          icon: 'success',
+          title: 'Item desequipado',
+          heightAuto: false
+        })
       },
     });
   }

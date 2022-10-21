@@ -26,4 +26,14 @@ export class CollectionService {
       }
     );
   }
+
+  unEquip(idEquip: number, item: any): Observable<any> {
+    return this.http.put(
+      `https://pixiesapp.herokuapp.com/disengage/?id=${idEquip}`,
+      item,
+      {
+        headers: this.headers,
+      }
+    );
+  }
 }

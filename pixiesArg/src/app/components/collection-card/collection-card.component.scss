@@ -59,3 +59,16 @@
     }
   }
 }
+
+.collection-card__footer-amount-unequip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: $dark-grey-color;
+  height: 36px;
+  padding: 5px auto;
+  color: $primary-text-color;
+}

@@ -29,6 +29,7 @@ export class StoreItemComponent implements OnInit {
       confirmButtonColor: '#547811',
       denyButtonText: `No lo quiero`,
       denyButtonColor: '#e0393a',
+      heightAuto: false,
     }).then((result) => {
       if (result.isConfirmed) {
         let userId: number = Number(this.cookieService.get('id'));
@@ -38,11 +39,23 @@ export class StoreItemComponent implements OnInit {
           .subscribe({
             next: (res) => {
               console.log(res);
-              Swal.fire('Compra exitosa', '', 'success');
+              Swal.fire({
+                title: 'Item comprado',
+                showDenyButton: true,
+                confirmButtonText: 'Ok',
+                confirmButtonColor: '#547811',
+                heightAuto: false,
+              });
               this.router.navigate(['/my-account']);
             },
             error: () => {
-              Swal.fire('No tienes dinero suficiente');
+              Swal.fire({
+                title: 'No tienes dinero suficiente',
+                showDenyButton: true,
+                confirmButtonText: 'Ok',
+                confirmButtonColor: '#e0393a',
+                heightAuto: false,
+              });
             },
           });
       } else if (result.isDenied) {

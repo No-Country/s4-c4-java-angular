@@ -12,7 +12,7 @@
       <div class="character-card__footer-likes-button">
         <img
           (click)="toggleFavorite()"
-          *ngIf="isFavorite; else isNoFavorite"
+          *ngIf="isFavorite"
           class="character-card__footer-likes-button-icon--favorite"
           src="assets/iconos/union-filled.svg"
           alt="heart icon"
@@ -26,12 +26,3 @@
     </div>
   </div>
 </div>
-
-<ng-template #isNoFavorite>
-  <img
-    (click)="toggleFavorite()"
-    class="character-card__footer-likes-button-icon"
-    src="assets/iconos/union.svg"
-    alt="heart icon"
-  />
-</ng-template>

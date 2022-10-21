@@ -7,6 +7,7 @@ import {
   SimpleChanges,
 } from '@angular/core';
 import { Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie';
 
 @Component({
   selector: 'app-logout-counter',
@@ -22,8 +23,10 @@ export class LogoutCounterComponent implements OnInit, OnDestroy {
       if (this.seconds > 0) {
         this.seconds = this.seconds - 1;
         return this.seconds;
+      } else if (this.seconds === 0) {
+        this.logout();
+        return 0;
       } else {
-        console.log('Me salí');
         clearInterval(interval);
         return 0;
       }
@@ -35,7 +38,12 @@ export class LogoutCounterComponent implements OnInit, OnDestroy {
     this.router.navigate(['/home']);
   }
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private cookieService: CookieService) {}
+
+  logout() {
+    this.cookieService.removeAll();
+    this.router.navigate(['/login']);
+  }
 
   ngOnInit(): void {
     this.countDown();

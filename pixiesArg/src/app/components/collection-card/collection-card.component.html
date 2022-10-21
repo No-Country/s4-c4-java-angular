@@ -17,8 +17,19 @@
       />
     </div>
 
-    <div class="collection-card__footer" (click)="equip(item)">
-      <div class="collection-card__footer-amount">Equipar</div>
-    </div>
+    <ng-container *ngIf="item.isAvailable; else unEquipBlock">
+      <div class="collection-card__footer">
+        <div (click)="equip(item)" class="collection-card__footer-amount">
+          Equipar
+        </div>
+      </div>
+    </ng-container>
+    <ng-template #unEquipBlock>
+      <div class="collection-card__footer">
+        <div (click)="unequip(item)" class="collection-card__footer-amount-unequip">Quitar</div>
+      </div>
+    </ng-template>
   </div>
 </div>
+
+

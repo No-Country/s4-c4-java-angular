@@ -16,15 +16,19 @@
   </div>
   <div class="character-card__footer">
     <div class="character-card__footer-likes">
-      <div class="character-card__footer-likes-amount">12048 me gusta</div>
+      <div class="character-card__footer-likes-amount">
+        {{ avatar.likes || 0 }} Me gusta
+      </div>
       <div class="character-card__footer-likes-button">
-        <img
-          (click)="toggleFavorite()"
-          *ngIf=" isFavorite ; else isFavoriteBlock"
-          class="character-card__footer-likes-button-icon--favorite unfilled"
-          src="assets/iconos/union.svg"
-          alt="heart icon"
-        />
+        <ng-container *ngIf="myUser.idUser !== avatar.idUser">
+          <img
+            (click)="toggleFavorite()"
+            *ngIf="isNotFavorite; else isFavoriteBlock"
+            class="character-card__footer-likes-button-icon--favorite unfilled"
+            src="assets/iconos/union.svg"
+            alt="heart icon"
+          />
+        </ng-container>
       </div>
     </div>
     <div class="character-card__footer-data">

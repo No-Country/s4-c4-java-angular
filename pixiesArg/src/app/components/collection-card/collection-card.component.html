@@ -1,4 +1,5 @@
 <div class="collection-container">
+  <div *ngIf="!collection.length" class="empty">Aún no tienes equipo</div>
   <div class="collection-card" *ngFor="let item of collection">
     <div class="collection-card__header">
       <div class="collection-card__header-name">{{ item.name }}</div>

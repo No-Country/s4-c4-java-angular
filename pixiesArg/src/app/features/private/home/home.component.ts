@@ -14,14 +14,21 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.userAvatars.allUsers().subscribe({
       next: (res) => {
-        console.log(res);
         this.avatars = res;
       },
     });
 
     this.userAvatars.getUser().subscribe({
       next: (res) => {
-        localStorage.setItem('avatarId', res.avatar.id);
+        localStorage.setItem('avatarId', res.idUser);
+      },
+    });
+  }
+
+  refreshList() {
+    this.userAvatars.allUsers().subscribe({
+      next: (res) => {
+        this.avatars = res;
       },
     });
   }

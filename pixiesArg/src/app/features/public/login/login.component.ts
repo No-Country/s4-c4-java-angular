@@ -34,6 +34,7 @@ export class LoginComponent implements OnInit {
         console.log('response login', res);
         this.cookieService.put('token', res.token);
         localStorage.setItem('id', res.id);
+        localStorage.setItem('avatarId', res.id);
         this.router.navigate(['/home']);
       },
     });

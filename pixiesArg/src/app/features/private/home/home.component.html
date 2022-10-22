@@ -1,5 +1,6 @@
 <div style="margin: 30px">
   <app-character-card
+  (refresh)="refreshList()"
     *ngFor="let avatar of avatars"
     [avatar]="avatar"
   ></app-character-card>

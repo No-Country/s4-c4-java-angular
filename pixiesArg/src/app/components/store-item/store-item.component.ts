@@ -22,9 +22,9 @@ export class StoreItemComponent implements OnInit {
 
   willYouBuy(item: any): void {
     Swal.fire({
-      title: 'Estas seguro que quieres este item?',
+      title: '¿Estas seguro?',
+      text: 'Las compras no tienen devoluciones',
       showDenyButton: true,
-      showCancelButton: true,
       confirmButtonText: 'Si, comprar',
       confirmButtonColor: '#547811',
       denyButtonText: `No lo quiero`,
@@ -40,8 +40,8 @@ export class StoreItemComponent implements OnInit {
             next: (res) => {
               console.log(res);
               Swal.fire({
-                title: 'Item comprado',
-                showDenyButton: true,
+                title: 'Exito!',
+                text: 'Item adquirido',
                 confirmButtonText: 'Ok',
                 confirmButtonColor: '#547811',
                 heightAuto: false,

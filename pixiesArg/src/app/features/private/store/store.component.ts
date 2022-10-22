@@ -11,6 +11,7 @@ export class StoreComponent implements OnInit {
   items!: Assets;
   iterable: any[] | undefined = [];
   assetType: string = '';
+  displaySeller: boolean = true;
 
   constructor(private store: StoreService) {}
 
@@ -22,8 +23,8 @@ export class StoreComponent implements OnInit {
     });
   }
 
-
   onChange(event: any) {
+    this.displaySeller = false;
     this.assetType = event.target.value;
 
     switch (event.target.value) {

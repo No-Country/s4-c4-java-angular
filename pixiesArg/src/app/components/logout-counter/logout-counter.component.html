@@ -38,6 +38,7 @@
       >Volver</app-pixel-button
     >
     <app-pixel-button
+      (click)="logout()"
       routerLink="/login"
       class="logout__actions-button"
       [cancel]="true"
@@ -46,6 +47,7 @@
   </div>
   <div class="logout__game-over" *ngIf="seconds === 0">
     <app-pixel-button
+      (click)="logout()"
       routerLink="/login"
       class="logout__actions-button"
       [cancel]="true"

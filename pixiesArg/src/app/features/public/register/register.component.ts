@@ -26,7 +26,7 @@ export class RegisterComponent implements OnInit {
   register() {
     this.registerService.postRegister(this.registerForm.value).subscribe({
       next: () => {
-        this.router.navigate(['/register']);
+        this.router.navigate(['/login']);
       },
     });
   }

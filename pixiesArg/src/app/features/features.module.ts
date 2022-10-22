@@ -24,6 +24,9 @@ import { MyAccountCardComponent } from '../components/my-account-card/my-account
 import { MyAccountComponent } from './private/my-account/my-account.component';
 import { StoreComponent } from './private/store/store.component';
 import { StoreItemComponent } from '../components/store-item/store-item.component';
+import { CollectionCardComponent } from '../components/collection-card/collection-card.component';
+import { CollectionViewComponent } from './private/collection/collection-view.component';
+import { OnBoardingViewComponent } from './public/on-boarding-view/on-boarding-view.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +52,15 @@ import { StoreItemComponent } from '../components/store-item/store-item.componen
     MyAccountComponent,
     StoreComponent,
     StoreItemComponent,
+    CollectionCardComponent,
+    CollectionViewComponent,
+    OnBoardingViewComponent,
   ],
-  imports: [CommonModule, FeaturesRoutingModule, ReactiveFormsModule, FormsModule],
+  imports: [
+    CommonModule,
+    FeaturesRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+  ],
 })
 export class FeaturesModule {}

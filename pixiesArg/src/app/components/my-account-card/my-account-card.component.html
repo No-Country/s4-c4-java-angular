@@ -4,7 +4,7 @@
       <div class="my-account-card__header-data-name">
         {{ myData.firstName }} {{ myData.lastName }}
       </div>
-      <div class="my-account-card__header-data-email">{{ myData }}</div>
+      <div class="my-account-card__header-data-email">{{ myData.email }}</div>
       <div class="my-account-card__header-data-country">
         {{ myData.country }}
       </div>
@@ -15,6 +15,14 @@
         [src]="myData.avatar.image"
         alt="pixie image"
       />
+      <ng-container *ngFor="let item of myData.assets">
+        <img
+          *ngIf="item.equipped"
+          class="my-account-card__header-profile-image-asset"
+          [src]="item.image"
+          alt="pixie image"
+        />
+      </ng-container>
     </div>
   </div>
   <div class="my-account-card__pixie">
@@ -23,6 +31,14 @@
       [src]="myData.avatar.image"
       alt="My pixie"
     />
+    <ng-container *ngFor="let item of myData.assets">
+      <img
+        *ngIf="item.equipped"
+        class="my-account-card__pixie-image"
+        [src]="item.image"
+        alt="My pixie"
+      />
+    </ng-container>
   </div>
   <div class="my-account-card__money">
     <div class="my-account-card__money-image">

@@ -1,6 +1,18 @@
 @import "/src/assets/styles/main.scss";
 
-.store-item {
+.collection-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty {
+  margin-top: 20px;
+}
+
+.collection-card {
+  margin: 20px;
   position: relative;
   height: 150px;
   width: 140px;
@@ -12,6 +24,7 @@
     color: $dark-grey-text-color;
     margin: 5px;
   }
+
   &__image {
     position: relative;
     &-png {
@@ -31,11 +44,6 @@
       width: 130px;
       object-fit: contain;
       object-position: center;
-      &--sold {
-        z-index: 10;
-        top: -30px;
-        left: 5px;
-      }
     }
   }
 
@@ -54,4 +62,17 @@
       color: $primary-text-color;
     }
   }
+}
+
+.collection-card__footer-amount-unequip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: $dark-grey-color;
+  height: 36px;
+  padding: 5px auto;
+  color: $primary-text-color;
 }

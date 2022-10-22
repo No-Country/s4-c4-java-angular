@@ -7,10 +7,10 @@ import { CookieService } from 'ngx-cookie';
 @Injectable({
   providedIn: 'root',
 })
-export class StoreService {
+export class CollectionService {
   token = this.cookieService.get('token');
-
-  idUser = localStorage.getItem('id');
+  id = localStorage.getItem('id')
+  avatarId = localStorage.getItem('avatarId')
 
   headers = new HttpHeaders({
     Authorization: `Bearer ${this.token}`,
@@ -18,15 +18,19 @@ export class StoreService {
 
   constructor(private http: HttpClient, private cookieService: CookieService) {}
 
-  getStore(): Observable<any> {
-    return this.http.get('https://pixiesapp.herokuapp.com/store/1', {
-      headers: this.headers,
-    });
+  putEquip(idEquip: number, item: any): Observable<any> {
+    return this.http.put(
+      `https://pixiesapp.herokuapp.com/equip/?id=${idEquip}`,
+      item,
+      {
+        headers: this.headers,
+      }
+    );
   }
 
-  buyItem(type: string, id: number, user: number, item: any): Observable<any> {
+  unEquip(idEquip: number, item: any): Observable<any> {
     return this.http.put(
-      `https://pixiesapp.herokuapp.com/inventory/${type}/?${type}=${id}&user=${this.idUser}`,
+      `https://pixiesapp.herokuapp.com/disengage/?id=${idEquip}`,
       item,
       {
         headers: this.headers,

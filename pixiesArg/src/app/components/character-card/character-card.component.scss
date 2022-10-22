@@ -5,6 +5,7 @@
   height: 350px;
   border: 2px solid #3e3e3e;
   border-radius: 5px;
+  margin: 20px auto;
 
   &__top {
     background: $background-blue;
@@ -13,9 +14,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 
     &-image {
       height: 100%;
+    }
+    &-asset {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      z-index: 10;
     }
   }
 }
@@ -42,4 +51,7 @@
   }
 }
 
-
+.unfilled {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(7500%)
+    hue-rotate(122deg) brightness(86%) contrast(104%);
+}

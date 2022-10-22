@@ -1,37 +1,48 @@
-
 <div class="character-card">
   <div class="character-card__top">
     <img
       class="character-card__top-image"
+      [src]="avatar.avatar.image"
       alt="Pixies image"
     />
+    <ng-container *ngFor="let item of avatar.assets">
+      <img
+        *ngIf="item.equipped"
+        class="character-card__top-asset"
+        [src]="item.image"
+        alt="asset"
+      />
+    </ng-container>
   </div>
   <div class="character-card__footer">
     <div class="character-card__footer-likes">
-      <div class="character-card__footer-likes-amount">12048 me gusta</div>
+      <div class="character-card__footer-likes-amount">
+        {{ avatar.likes || 0 }} Me gusta
+      </div>
       <div class="character-card__footer-likes-button">
-        <img
-          (click)="toggleFavorite()"
-          *ngIf="isFavorite; else isNoFavorite"
-          class="character-card__footer-likes-button-icon--favorite"
-          src="assets/iconos/union-filled.svg"
-          alt="heart icon"
-        />
+        <ng-container *ngIf="myUser.idUser !== avatar.idUser">
+          <img
+            (click)="toggleFavorite()"
+            *ngIf="isNotFavorite; else isFavoriteBlock"
+            class="character-card__footer-likes-button-icon--favorite unfilled"
+            src="assets/iconos/union.svg"
+            alt="heart icon"
+          />
+        </ng-container>
       </div>
     </div>
     <div class="character-card__footer-data">
-      <p>Dueño: Paz Gonzalez</p>
-      <p>26 septiembre 2022 11:22</p>
-      <p>Token ID: 5352748251642439</p>
+      <p>Dueño: {{ avatar.firstName }} {{ avatar.lastName }}</p>
+      <p>País: {{ avatar.country }}</p>
+      <p>Token ID: {{ id }}</p>
     </div>
   </div>
 </div>
 
-<ng-template #isNoFavorite>
+<ng-template #isFavoriteBlock>
   <img
-    (click)="toggleFavorite()"
-    class="character-card__footer-likes-button-icon"
-    src="assets/iconos/union.svg"
+    class="character-card__footer-likes-button-icon--favorite"
+    src="assets/iconos/union-filled.svg"
     alt="heart icon"
   />
 </ng-template>

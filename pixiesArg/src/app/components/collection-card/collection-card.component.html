@@ -1,0 +1,36 @@
+<div class="collection-container">
+  <div *ngIf="!collection.length" class="empty">Aún no tienes equipo</div>
+  <div class="collection-card" *ngFor="let item of collection">
+    <div class="collection-card__header">
+      <div class="collection-card__header-name">{{ item.name }}</div>
+      <div class="collection-card__header-id">#{{ item.id }}</div>
+    </div>
+    <div class="collection-card__image">
+      <img
+        class="collection-card__image-png"
+        src="assets/images/store-avatar.png"
+        alt="Avatar"
+      />
+      <img
+        class="collection-card__image-png"
+        [src]="item.image"
+        alt="My item"
+      />
+    </div>
+
+    <ng-container *ngIf="!item.equipped; else unEquipBlock">
+      <div class="collection-card__footer">
+        <div (click)="equip(item)" class="collection-card__footer-amount">
+          Equipar
+        </div>
+      </div>
+    </ng-container>
+    <ng-template #unEquipBlock>
+      <div class="collection-card__footer">
+        <div (click)="unequip(item)" class="collection-card__footer-amount-unequip">Quitar</div>
+      </div>
+    </ng-template>
+  </div>
+</div>
+
+

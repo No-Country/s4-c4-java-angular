@@ -22,7 +22,7 @@ export class BottombarComponent implements OnInit {
   }
 
   getNonBottomRoutes() {
-    let routes = ['/login', '/register'];
+    let routes = ['/login', '/register', '', '/onboarding2', '/onboarding3'];
     let url = this.routing.path();
     return routes.includes(url);
   }

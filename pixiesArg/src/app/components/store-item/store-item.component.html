@@ -1,1 +1,32 @@
-<p>store-item works!</p>
+<div class="store-item">
+  <div class="store-item__header">
+    <div class="store-item__header-name">{{ item.name }}</div>
+    <div class="store-item__header-id">#{{ item.id }}</div>
+  </div>
+  <div class="store-item__image">
+    <img
+      class="store-item__image-png"
+      src="assets/images/store-avatar.png"
+      alt="Avatar"
+    />
+    <img class="store-item__image-item" [src]="item.image" alt="Item" />
+    <img
+      *ngIf="!item.isAvailable"
+      class="store-item__image-item store-item__image-item--sold"
+      src="assets/images/sold-out.png"
+      alt="Sold Out Sign"
+    />
+  </div>
+
+  <div class="store-item__footer">
+    <ng-container *ngIf="item.isAvailable; else soldOut">
+      <div (click)="willYouBuy(item)" class="store-item__footer-amount">
+        ${{ item.price }}
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+<ng-template #soldOut>
+  <div class="store-item__footer-amount">Sold Out</div>
+</ng-template>
